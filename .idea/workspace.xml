@@ -44,8 +44,8 @@
       <file leaf-file-name="sort.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sort.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="181" column="5" lean-forward="true" selection-start-line="176" selection-start-column="4" selection-end-line="181" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
               <folding>
                 <element signature="e#1729#1747#0" expanded="true" />
               </folding>
@@ -68,7 +68,12 @@
     <findStrings>
       <find>fscanf</find>
       <find>MEMORY</find>
+      <find>malloc</find>
+      <find>free</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -94,6 +99,7 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -118,7 +124,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ME MATA POR FAVOR" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -162,24 +168,23 @@
       <workItem from="1526242213594" duration="50000" />
       <workItem from="1526331570835" duration="67000" />
       <workItem from="1526418348635" duration="704000" />
-      <workItem from="1526487582192" duration="6160000" />
+      <workItem from="1526487582192" duration="7196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26420000" />
+    <option name="totallyTimeSpent" value="27456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.2400636" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.2400636" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.22575517" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -423,8 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sort.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="181" column="5" lean-forward="true" selection-start-line="176" selection-start-column="4" selection-end-line="181" selection-end-column="5" />
+        <state relative-caret-position="270">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
           <folding>
             <element signature="e#1729#1747#0" expanded="true" />
           </folding>

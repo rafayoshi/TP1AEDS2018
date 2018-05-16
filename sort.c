@@ -48,7 +48,7 @@ int cstring_cmp(const void *a, const void *b)
 }
 
 int a_menor_que_b(char* a, char* b, int len) {
-    int i, sizeA = 0, sizeB = 0;
+    int i;
     for(i = 0; i < len - 1; i++){
         if(a[i] < b[i]){
             return 1;
@@ -57,6 +57,7 @@ int a_menor_que_b(char* a, char* b, int len) {
             return 0;
         }
     }
+    return 0;
 }
 
 // Parâmetros:
@@ -95,7 +96,6 @@ void external_sort(const char* input_file, const char* output_file, unsigned int
     fclose(arq);
     fclose(fita);
     char **arraySort = (char **) mathias_malloc((elementosMem + 1) * sizeof(char *));
-    int k;
     for(i = 0; i < numArqs; i++){
         sprintf(nomeArq, "arq%d.txt", i);
         fita = fopen(nomeArq, "r");
