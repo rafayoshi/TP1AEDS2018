@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rafae/CLionProjects/TP1AEDS2018/main.c
+sys/time.h
+-
+stdio.h
+-
+stdlib.h
+-
+sort.h
+C:/Users/rafae/CLionProjects/TP1AEDS2018/sort.h
+mem.h
+C:/Users/rafae/CLionProjects/TP1AEDS2018/mem.h
+
+C:/Users/rafae/CLionProjects/TP1AEDS2018/mem.c
+stdio.h
+-
+stdlib.h
+-
+mem.h
+C:/Users/rafae/CLionProjects/TP1AEDS2018/mem.h
+
+C:/Users/rafae/CLionProjects/TP1AEDS2018/mem.h
+
+C:/Users/rafae/CLionProjects/TP1AEDS2018/sort.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+mem.h
+C:/Users/rafae/CLionProjects/TP1AEDS2018/mem.h
+
+C:/Users/rafae/CLionProjects/TP1AEDS2018/sort.h
+
