@@ -53,36 +53,30 @@ int a_menor_que_b(char* a, char* b, int len) {
         if(a[i] < b[i]){
             return 1;
         }
-        else{
+        else if(a[i] > b[i]){
             return 0;
         }
     }
     return 0;
 }
 
-// Parâmetros:
-//     - input_file: o nome do arquivo com os registros de entrada;
-//     - output_file: o nome do arquivo com os registros de entrada ordenados;
-//     - memory: o limite de memória a ser usado.
-// Essa função deverá ler todos registros do arquivo `input_file`, ordená-los e
-// escrevê-los em `output_file`, usando memória menor ou igual a `memory`. Lembre-se
-// de fechar todos os arquivos que você usar por aqui!!
 void external_sort(const char* input_file, const char* output_file, unsigned int memory) {
     int numArqs = 0, i, j = 0, tamanhoString;
     FILE *arq = fopen(input_file, "r");
     FILE *fita;
+    memory = memory * 1000;
     fscanf(arq, "%d\n", &tamanhoString);
     tamanhoString++;
     size_t elementosMem = memory/sizeof(char);
     char nomeArq[20];
-    char *string = mathias_malloc(tamanhoString * sizeof(char));
+    char *string = malloc(tamanhoString * sizeof(char));
     sprintf(nomeArq, "arq%d.txt", numArqs);
     fita = fopen(nomeArq, "w");
     numArqs++;
     while(fgets(string, tamanhoString, arq))
     {
         if(strcmp(string, "\n") != 0){
-            if (j == elementosMem) {
+            if (j == (elementosMem)/tamanhoString) {
                 fclose(fita);
                 j = 0;
                 sprintf(nomeArq, "arq%d.txt", numArqs);
@@ -95,14 +89,14 @@ void external_sort(const char* input_file, const char* output_file, unsigned int
     }
     fclose(arq);
     fclose(fita);
-    char **arraySort = (char **) mathias_malloc((elementosMem + 1) * sizeof(char *));
+    char **arraySort = (char **) malloc((elementosMem * sizeof(char *))/tamanhoString);
     for(i = 0; i < numArqs; i++){
         sprintf(nomeArq, "arq%d.txt", i);
         fita = fopen(nomeArq, "r");
         j = 0;
         while(fgets(string, tamanhoString, fita)){
             if(strcmp(string, "\n") != 0){
-                arraySort[j] = (char *) mathias_malloc(tamanhoString * sizeof(char *));
+                arraySort[j] = (char *) malloc(tamanhoString * sizeof(char *));
                 strcpy(arraySort[j], string);
                 j++;
             }
@@ -118,10 +112,10 @@ void external_sort(const char* input_file, const char* output_file, unsigned int
         }
         fclose(fita);
     }
-    mathias_free(string);
+    free(string);
     int arquivosFaltantes = numArqs;
-    char *string1 = mathias_malloc(tamanhoString * sizeof(char));
-    char *string2 = mathias_malloc(tamanhoString * sizeof(char));
+    char *string1 = malloc(tamanhoString * sizeof(char));
+    char *string2 = malloc(tamanhoString * sizeof(char));
     FILE *arq1;
     FILE *arq2;
     FILE *merged;
@@ -154,12 +148,12 @@ void external_sort(const char* input_file, const char* output_file, unsigned int
                 }
             }
             else{
-                fprintf(merged, "%s\n", string1);
+                fprintf(merged, "%s\n", string2);
                 if(fgets(string2, tamanhoString, arq2) == NULL){
                     status = 2;
                     fclose(arq2);
                 }
-                if(strcmp(string1, "\n") == 0){
+                if(strcmp(string2, "\n") == 0){
                     if(fgets(string2, tamanhoString, arq2) == NULL){
                         status = 2;
                         fclose(arq2);
@@ -195,12 +189,13 @@ void external_sort(const char* input_file, const char* output_file, unsigned int
     while(fgets(string1, tamanhoString, arq1)){
         if(strcmp(string1, "\n") != 0){
             fprintf(output, "%s\n", string1);
+            printf("%s\n", string1);
         }
     }
     fclose(output);
     fclose(arq1);
-    mathias_free(string1);
-    mathias_free(string2);
+    free(string1);
+    free(string2);
     i = 0;
     while(i <= numArqs){
         sprintf(nomeArq, "arq%d.txt", i);
